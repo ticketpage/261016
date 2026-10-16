@@ -1,94 +1,153 @@
-<div class="c-clubWysiwyg">
-    <!-- 1つ目の販売情報 -->
-    <div class="sale-info">
-        <h2 class="event-title">真っ白なキャンバス リフレインツアー 『白事記〜落とされたキャンバス〜』恵比寿CreAto公演</h2>
-        <p><strong><span class="title-text">販売期間</span></strong></p>
-        <p>2024年9月13日(金)20:00 ～ 先着販売開始</p>
-        <p class="note-text">※ボタンを押すと外部のサイトへ移動します。XやLINE等、アプリ内ブラウザからのアクセスはエラーとなる場合がございます。SafariやGoogle Chrome等、端末の標準ブラウザからアクセスしてください。</p>
-        <div class="l-tike_btn">
-            <form action="https://ticket.pia.jp/piasp/prs/shirokyan/shirokyan24fcst.jsp" method="POST">
-                <input type="hidden" name="slcd" value="shirokyan24fcst">
-                <input type="hidden" name="acpt_no" value="Ukk90GO0kH6zeHVk">
-                <input type="submit" value="チケットを申し込む" class="submit-btn">
-            </form>
-        </div>
-    </div>
-
-    <hr>
-
-    <!-- 2つ目の販売情報 -->
-    <div class="sale-info">
-        <h2 class="event-title">真っ白なキャンバス リフレインツアー 『白事記〜Ending is Beginning〜』渋谷チェルシーホテル</h2>
-        <p><strong><span class="title-text">販売期間</span></strong></p>
-        <p>2024年9月13日(金)20:30 ～ 先着販売開始</p>
-        <p class="note-text">※ボタンを押すと外部のサイトへ移動します。XやLINE等、アプリ内ブラウザからのアクセスはエラーとなる場合がございます。SafariやGoogle Chrome等、端末の標準ブラウザからアクセスしてください。</p>
-        <div class="l-tike_btn">
-            <form action="https://ticket.pia.jp/piasp/prs/shirokyan/shirokyan24rfrfcss.jsp" method="POST">
-                <input type="hidden" name="slcd" value="shirokyan24rfrfcss">
-                <input type="hidden" name="acpt_no" value="dnXq2206ud2MUPAN">
-                <input type="submit" value="チケットを申し込む" class="submit-btn">
-            </form>
-        </div>
-    </div>
-</div>
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5f6fa">
+<title>チケット申込・当落まとめ</title>
 <style>
-/* 全体のコンテナ設定 */
-.c-clubWysiwyg {
-    max-width: 800px; /* コンテンツの最大幅を設定 */
-    margin: 0 auto; /* 中央揃え */
-    padding: 20px;
-    text-align: left; /* テキスト左揃え */
+:root{
+  color-scheme:light;
+  --bg:#f5f6fa; --card:rgba(255,255,255,.82); --ink:#171923; --muted:#747887;
+  --line:rgba(25,29,44,.08); --blue:#3478f6; --blue-soft:#eaf1ff;
+  --purple:#7658e8; --purple-soft:#f0edff; --orange:#b96b14; --orange-soft:#fff2df;
+  --green:#23845d; --green-soft:#e4f7ed; --shadow:0 10px 34px rgba(35,43,75,.055);
 }
-
-/* セール情報のスタイル */
-.sale-info {
-    margin-bottom: 40px;
-}
-
-/* イベントタイトルのスタイル */
-.event-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* タイトルのスタイル */
-.c-clubWysiwyg .title-text {
-    font-size: 24px;
-    color: var(--color-base-font, #1a1a1a);
-}
-
-/* 注意書きのスタイル */
-.c-clubWysiwyg .note-text {
-    font-size: 12px;
-    color: var(--color-base-font, #1a1a1a);
-    line-height: 1.5;
-}
-
-/* ボタンのスタイル */
-.l-tike_btn {
-    margin: 20px auto;
-    text-align: center;
-}
-
-.l-tike_btn input[type=submit] {
-    border-radius: 3rem;
-    min-width: 240px;
-    height: 48px;
-    padding: 0 16px;
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-    background: #70adf7;
-    border: solid 2px #70adf7;
-    cursor: pointer;
-    transition: .3s ease;
-}
-
-.l-tike_btn input[type=submit]:hover {
-    color: #70adf7;
-    background: #fff;
-}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 10% 0%,#e9efff 0,transparent 34%),radial-gradient(ellipse at 100% 12%,#f0eaff 0,transparent 28%),var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Hiragino Sans","Noto Sans JP",sans-serif;letter-spacing:-.025em}
+main{width:min(760px,100%);margin:0 auto;padding:clamp(20px,5vw,38px) 18px calc(34px + env(safe-area-inset-bottom))}
+header{padding:12px 2px 24px}
+.eyebrow{font-size:11px;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+h1{font-size:clamp(27px,6vw,36px);line-height:1.16;letter-spacing:-.055em;margin:0 0 10px;font-weight:780}
+.subtitle{font-size:13px;color:var(--muted);margin:0;line-height:1.6}
+.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:0 0 22px}
+.metric{background:var(--card);border:1px solid rgba(255,255,255,.9);box-shadow:var(--shadow);border-radius:20px;padding:14px 13px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.metric .label{font-size:11px;color:var(--muted);font-weight:650;margin-bottom:7px}
+.metric .value{font-size:22px;font-weight:780;letter-spacing:-.05em}
+.metric .small{font-size:10px;color:var(--muted);margin-top:3px}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin:26px 2px 12px}
+.section-head h2{font-size:15px;margin:0;font-weight:750}
+.section-head span{font-size:11px;color:var(--muted)}
+.list{display:flex;flex-direction:column;gap:11px}
+.ticket{background:var(--card);border:1px solid rgba(255,255,255,.92);border-radius:23px;padding:17px;box-shadow:var(--shadow);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.ticket-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.name{font-size:18px;font-weight:760;letter-spacing:-.04em;margin:0}
+.badge{white-space:nowrap;font-size:10px;font-weight:750;border-radius:999px;padding:6px 9px;background:var(--blue-soft);color:var(--blue)}
+.badge.soon{background:var(--orange-soft);color:var(--orange)}
+.badge.draw{background:var(--purple-soft);color:var(--purple)}
+.badge.closed{background:#eceef2;color:#747887}
+.times{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:15px 0}
+.timebox{padding:11px 12px;background:rgba(244,246,250,.85);border-radius:15px;min-width:0}
+.time-label{font-size:10px;color:var(--muted);font-weight:650;margin-bottom:5px}
+.time-value{font-size:15px;font-weight:760;letter-spacing:-.03em;white-space:nowrap}
+.time-sub{font-size:10px;color:var(--muted);margin-top:4px}
+.bottom{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.countdown{font-size:11px;color:var(--muted);line-height:1.45}
+.countdown strong{display:block;color:var(--ink);font-size:12px;font-weight:730}
+.link{display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;background:var(--ink);color:white;border-radius:13px;padding:11px 14px;font-size:12px;font-weight:720;white-space:nowrap;transition:transform .15s,opacity .15s}
+.link:active{transform:scale(.97);opacity:.85}
+.link svg{width:13px;height:13px}
+.note{margin:22px 2px 0;font-size:11px;line-height:1.7;color:var(--muted)}
+footer{text-align:center;font-size:10px;color:#969aa7;padding-top:25px}
+@media(min-width:600px){.ticket{padding:19px 20px}.times{margin:16px 0}.time-value{font-size:16px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
+</head>
+<body>
+<main>
+<header>
+  <div class="eyebrow">TICKET TRACKER · OCT 2026</div>
+  <h1>申込・当落スケジュール</h1>
+  <p class="subtitle">締切と当落発表を、ひとつの画面でチェック。</p>
+</header>
+<section class="summary" aria-label="スケジュール概要">
+  <div class="metric"><div class="label">申込先</div><div class="value">5<span style="font-size:13px">件</span></div><div class="small">登録済み</div></div>
+  <div class="metric"><div class="label">次の締切</div><div class="value" id="next-date">—</div><div class="small" id="next-name">確認中</div></div>
+  <div class="metric"><div class="label">次の当落</div><div class="value" id="draw-date">—</div><div class="small" id="draw-name">確認中</div></div>
+</section>
+
+<div class="section-head"><h2>申込一覧</h2><span>2026年10月</span></div>
+<section class="list" id="tickets">
+  <article class="ticket" data-name="スタダ顔" data-deadline="2026-10-18T23:59:00+09:00" data-draw="2026-10-23T18:00:00+09:00">
+    <div class="ticket-top"><h3 class="name">スタダ顔</h3><span class="badge">申込受付中</span></div>
+    <div class="times">
+      <div class="timebox"><div class="time-label">申込締切</div><div class="time-value">10/18（日）23:59</div><div class="time-sub">締切まで <span class="deadline-count">—</span></div></div>
+      <div class="timebox"><div class="time-label">当落発表</div><div class="time-value">10/23（金）18:00</div><div class="time-sub">発表まで <span class="draw-count">—</span></div></div>
+    </div>
+    <div class="bottom"><div class="countdown"><strong>e＋</strong>申込ページへ移動</div><a class="link" href="https://eplus.jp/stadagao1124/" target="_blank" rel="noopener noreferrer">申込ページ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+  </article>
+
+  <article class="ticket" data-name="シガコレ" data-deadline="2026-10-19T23:59:00+09:00" data-draw="2026-10-21T13:00:00+09:00">
+    <div class="ticket-top"><h3 class="name">シガコレ</h3><span class="badge">申込受付中</span></div>
+    <div class="times">
+      <div class="timebox"><div class="time-label">申込締切</div><div class="time-value">10/19（月）23:59</div><div class="time-sub">締切まで <span class="deadline-count">—</span></div></div>
+      <div class="timebox"><div class="time-label">当落発表</div><div class="time-value">10/21（水）13:00</div><div class="time-sub">発表まで <span class="draw-count">—</span></div></div>
+    </div>
+    <div class="bottom"><div class="countdown"><strong>Ticket Page</strong>申込ページへ移動</div><a class="link" href="https://ticketpage.github.io/ochanorma/" target="_blank" rel="noopener noreferrer">申込ページ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+  </article>
+
+  <article class="ticket" data-name="ワンダンス" data-deadline="2026-10-18T23:59:00+09:00" data-draw="2026-10-24T15:00:00+09:00">
+    <div class="ticket-top"><h3 class="name">ワンダンス</h3><span class="badge">申込受付中</span></div>
+    <div class="times">
+      <div class="timebox"><div class="time-label">申込締切</div><div class="time-value">10/18（日）23:59</div><div class="time-sub">締切まで <span class="deadline-count">—</span></div></div>
+      <div class="timebox"><div class="time-label">当落発表</div><div class="time-value">10/24（土）15:00</div><div class="time-sub">発表まで <span class="draw-count">—</span></div></div>
+    </div>
+    <div class="bottom"><div class="countdown"><strong>ローソンチケット</strong>申込ページへ移動</div><a class="link" href="https://l-tike.com/order/?gLcode=35576&amp;gPfKey=20261008000002309655&amp;gEntryMthd=03&amp;gScheduleNo=1&amp;gCarrierCd=08" target="_blank" rel="noopener noreferrer">申込ページ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+  </article>
+
+  <article class="ticket" data-name="ナビレラ" data-deadline="2026-10-18T23:59:00+09:00" data-draw="2026-10-21T15:00:00+09:00">
+    <div class="ticket-top"><h3 class="name">ナビレラ</h3><span class="badge">申込受付中</span></div>
+    <div class="times">
+      <div class="timebox"><div class="time-label">申込締切</div><div class="time-value">10/18（日）23:59</div><div class="time-sub">締切まで <span class="deadline-count">—</span></div></div>
+      <div class="timebox"><div class="time-label">当落発表</div><div class="time-value">10/21（水）15:00</div><div class="time-sub">発表まで <span class="draw-count">—</span></div></div>
+    </div>
+    <div class="bottom"><div class="countdown"><strong>ローソンチケット</strong>申込ページへ移動</div><a class="link" href="https://ticketpage.github.io/ltike/" target="_blank" rel="noopener noreferrer">申込ページ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+  </article>
+
+  <article class="ticket" data-name="うるわし" data-deadline="2026-10-19T11:00:00+09:00" data-draw="2026-10-19T20:00:00+09:00">
+    <div class="ticket-top"><h3 class="name">うるわし</h3><span class="badge soon">締切が近い</span></div>
+    <div class="times">
+      <div class="timebox"><div class="time-label">申込締切</div><div class="time-value">10/19（月）11:00</div><div class="time-sub">締切まで <span class="deadline-count">—</span></div></div>
+      <div class="timebox"><div class="time-label">当落発表</div><div class="time-value">10/19（月）20:00</div><div class="time-sub">発表まで <span class="draw-count">—</span></div></div>
+    </div>
+    <div class="bottom"><div class="countdown"><strong>チケットぴあ</strong>申込ページへ移動</div><a class="link" href="https://w.pia.jp/s/uruwashi26sba" target="_blank" rel="noopener noreferrer">申込ページ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+  </article>
+</section>
+<p class="note">時刻は日本時間（JST）です。残り時間とステータスは、このHTMLを開いた端末の現在時刻を使って自動更新されます。</p>
+<footer>PERSONAL TICKET DASHBOARD · 2026</footer>
+</main>
+<script>
+const fmt = (ms) => {
+  if (ms <= 0) return "終了";
+  const total = Math.floor(ms/1000), d=Math.floor(total/86400), h=Math.floor(total%86400/3600), m=Math.floor(total%3600/60);
+  if(d>0) return `${d}日 ${h}時間`;
+  if(h>0) return `${h}時間 ${m}分`;
+  return `${m}分`;
+};
+function update(){
+  const now=Date.now(), cards=[...document.querySelectorAll('.ticket')];
+  const activeDeadlines=[];
+  const futureDraws=[];
+  cards.forEach(card=>{
+    const deadline=Date.parse(card.dataset.deadline), draw=Date.parse(card.dataset.draw);
+    const badge=card.querySelector('.badge');
+    card.querySelector('.deadline-count').textContent=fmt(deadline-now);
+    card.querySelector('.draw-count').textContent=fmt(draw-now);
+    if(deadline>now) activeDeadlines.push({time:deadline,name:card.dataset.name});
+    if(draw>now) futureDraws.push({time:draw,name:card.dataset.name});
+    if(deadline<=now && draw>now){badge.textContent='締切済み';badge.className='badge draw';}
+    else if(draw<=now){badge.textContent='当落発表時刻経過';badge.className='badge closed';}
+    else if(deadline-now<24*3600*1000){badge.textContent='締切が近い';badge.className='badge soon';}
+    else {badge.textContent='申込受付中';badge.className='badge';}
+  });
+  activeDeadlines.sort((a,b)=>a.time-b.time);futureDraws.sort((a,b)=>a.time-b.time);
+  const dateLabel=t=>`${new Date(t).getMonth()+1}/${new Date(t).getDate()}`;
+  document.getElementById('next-date').textContent=activeDeadlines.length?dateLabel(activeDeadlines[0].time):'—';
+  document.getElementById('next-name').textContent=activeDeadlines.length?activeDeadlines[0].name:'締切済み';
+  document.getElementById('draw-date').textContent=futureDraws.length?dateLabel(futureDraws[0].time):'—';
+  document.getElementById('draw-name').textContent=futureDraws.length?futureDraws[0].name:'発表時刻経過';
+}
+update(); setInterval(update,30000);
+</script>
+</body>
+</html>
